@@ -24,69 +24,57 @@ const LifestyleRewards = () => {
   return (
     <div>
       <ImageSlider />
-      <div className="bg-white py-16 font-roboto px-8 md:px-16 lg:px-24">
-        <div className="flex flex-col max-w-5xl mx-auto lg:flex-row items-center justify-between">
+      <div className="bg-gradient-to-b from-white via-white to-gray-50 py-20 font-roboto px-8 md:px-16 lg:px-24">
+        <div className="flex flex-col max-w-6xl mx-auto lg:flex-row items-center justify-between gap-16">
           {/* Left Section (Text) */}
-          <div className={`lg:w-1/2 ${isRTL ? 'text-right' : 'text-left'} mb-12 lg:mb-0`}> 
-            <h2 className="text-4xl font-bold text-Green">{t("discover_lifestyle")}</h2>
-            <p className="mt-4 text-lg text-gray-600">{t("description")}</p>
+          <div className={`lg:w-1/2 ${isRTL ? 'text-right' : 'text-left'}`}> 
+            <h2 className="text-5xl lg:text-6xl font-bold text-Green leading-tight">{t("discover_lifestyle")}</h2>
+            <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-lg">{t("description")}</p>
             <a href='/offers-rewards'>
-              <button className="btn-primary mt-8 shadow-sm focus:outline-none">
+              <button className="btn-primary mt-10 shadow-lg hover:shadow-xl transition-shadow duration-300 focus:outline-none">
                 {t("unlock_rewards")}
               </button>
             </a>
           </div>
 
           {/* Right Section (Stats in 2x2 Grid) */}
-          <div className="lg:w-[560px] lg:h-[580px] grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 auto-rows-fr">
+          <div className="lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {/* Brands */}
-            <div className="p-8 bg-white rounded-[40px] lg:w-64 lg:h-full text-black flex shadow-custom flex-col items-center min-h-[240px] md:min-h-[260px] lg:min-h-[300px] card-lift">
-              <img src={i2} alt="Icon" className="w-20 h-20" />
-              <div className="flex-1 flex flex-col justify-center w-full">
-                <div className="w-full h-0.5 bg-black rounded-full mb-0 lg:mb-6"></div>
-                <div className="text-center">
-                  <h3 className="lg:text-6xl text-2xl font-bold">70+</h3>
-                  <p className="text-lg">{t("brands")}</p>
-                </div>
+            <div className="p-8 bg-white rounded-3xl shadow-custom text-black flex flex-col items-center justify-center min-h-[280px] card-lift hover:shadow-xl transition-all duration-300">
+              <img src={i2} alt="Icon" className="w-16 h-16 mb-6" />
+              <div className="text-center w-full">
+                <h3 className="text-5xl font-bold text-Green mb-2">70+</h3>
+                <p className="text-base text-gray-600 font-medium">{t("brands")}</p>
               </div>
-              <div className="mt-3">
-                <p className='text-[15px] font-bold text-Green blinking-text'>ACTIVE SOON</p>
+              <div className="mt-6 w-full">
+                <p className='text-xs font-bold text-Green text-center bg-Green/10 py-2 rounded-full'>ACTIVE SOON</p>
               </div>
             </div>
 
             {/* Countries */}
-            <div className="p-8 bg-white lg:w-64 lg:h-full rounded-[40px] shadow-custom text-black flex flex-col items-center min-h-[240px] md:min-h-[260px] lg:min-h-[300px] card-lift">
-              <img src={i3} alt="Icon" className="w-20 h-20" />
-              <div className="flex-1 flex flex-col justify-center w-full">
-                <div className="w-full h-0.5 bg-black rounded-full mb-0 lg:mb-6"></div>
-                <div className="text-center">
-                  <h3 className="lg:text-6xl text-2xl font-bold">5</h3>
-                  <p className="text-lg">{t("countries")}</p>
-                </div>
+            <div className="p-8 bg-white rounded-3xl shadow-custom text-black flex flex-col items-center justify-center min-h-[280px] card-lift hover:shadow-xl transition-all duration-300">
+              <img src={i3} alt="Icon" className="w-16 h-16 mb-6" />
+              <div className="text-center w-full">
+                <h3 className="text-5xl font-bold text-Green mb-2">5</h3>
+                <p className="text-base text-gray-600 font-medium">{t("countries")}</p>
               </div>
             </div>
 
             {/* Tiers */}
-            <div className="p-8 bg-white lg:w-64 lg:h-full rounded-[40px] shadow-custom text-black flex flex-col items-center min-h-[240px] md:min-h-[260px] lg:min-h-[300px] card-lift">
-              <img src={i1} alt="Icon" className="w-20 h-20" />
-              <div className="flex-1 flex flex-col justify-center w-full">
-                <div className="w-full h-0.5 bg-black rounded-full mb-0 lg:mb-6"></div>
-                <div className="text-center">
-                  <h3 className="lg:text-6xl text-2xl font-bold">3</h3>
-                  <p className="text-lg">{t("tiers")}</p>
-                </div>
+            <div className="p-8 bg-white rounded-3xl shadow-custom text-black flex flex-col items-center justify-center min-h-[280px] card-lift hover:shadow-xl transition-all duration-300">
+              <img src={i1} alt="Icon" className="w-16 h-16 mb-6" />
+              <div className="text-center w-full">
+                <h3 className="text-5xl font-bold text-Green mb-2">3</h3>
+                <p className="text-base text-gray-600 font-medium">{t("tiers")}</p>
               </div>
             </div>
 
             {/* Rewards */}
-            <div className="p-8 bg-white lg:w-64 lg:h-full rounded-[40px] shadow-custom text-black flex flex-col items-center min-h-[240px] md:min-h-[260px] lg:min-h-[300px] card-lift">
-              <img src={i4} alt="Icon" className="w-20 h-20" />
-              <div className="flex-1 flex flex-col justify-center w-full">
-                <div className="w-full h-0.5 bg-black rounded-full mb-0 lg:mb-6"></div>
-                <div className="text-center">
-                  <h3 className="lg:text-6xl text-2xl font-bold">50</h3>
-                  <p className="text-lg">{t("rewards")}</p>
-                </div>
+            <div className="p-8 bg-white rounded-3xl shadow-custom text-black flex flex-col items-center justify-center min-h-[280px] card-lift hover:shadow-xl transition-all duration-300">
+              <img src={i4} alt="Icon" className="w-16 h-16 mb-6" />
+              <div className="text-center w-full">
+                <h3 className="text-5xl font-bold text-Green mb-2">50</h3>
+                <p className="text-base text-gray-600 font-medium">{t("rewards")}</p>
               </div>
             </div>
           </div>

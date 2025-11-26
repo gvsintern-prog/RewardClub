@@ -45,81 +45,90 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white text-black py-12 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
-        <div className="md:col-span-2">
-          <ul className="space-y-3 text-black font-medium leading-relaxed">
-            <li><a href="/tiers-benefits">{t("exploreTiers")}</a></li>
-            <li><a href="/brands">{t("discoverBrands")}</a></li>
-            <li><a href="/offers-rewards">{t("unlockRewards")}</a></li>
-            <li><a href="/contact-us">{t("getSupport")}</a></li>
-          </ul>
-        </div>
-
-        <div className="relative right-0 lg:right-10">
-          <h3 className="font-semibold text-center">{t("customerSupport")}</h3>
-          <a href="tel:+97145284037">
-            <button className="btn-outline w-full mt-2 flex items-center justify-center gap-2">
-              <span className="text-Green font-semibold">{t("callSupport")}</span>
-              <span dir="ltr" style={{ unicodeBidi: "plaintext" }}>+971 45284037</span>
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto">
+        {/* Newsletter Section */}
+        <div className="bg-Green/10 border border-Green/30 rounded-2xl p-8 mb-12 max-w-2xl">
+          <h3 className="text-2xl font-bold mb-2">{t("newsletterHeading") || "Stay Connected"}</h3>
+          <p className="text-gray-300 mb-6">{t("newsletter_description") || "Get exclusive offers and updates delivered to your inbox"}</p>
+          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
+            <label htmlFor="footer-email" className="sr-only">{t('enterYourEmail')}</label>
+            <input
+              id="footer-email"
+              type="email"
+              placeholder={t("enterYourEmail") || "Enter your email"}
+              className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-Green"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button
+              type="submit"
+              className="btn-primary px-8 py-3 rounded-lg font-semibold whitespace-nowrap"
+              disabled={loading}
+            >
+              {loading ? t("submitting") || "..." : t("register") || "Subscribe"}
             </button>
-          </a>
-          <p className="text-Green text-center mt-2">
-            <a href="mailto:support@rewardclub.net">support@rewardclub.net</a>
-          </p>
+          </form>
+          {message && <p className="mt-3 text-sm text-Green">{message}</p>}
         </div>
 
-        <div className="relative left-0 lg:left-30 lg:right-30">
-          <div className="mb-4">
-            <h3 className="font-semibold">{t("followUs")}</h3>
-            <div className="flex space-x-3 mt-2">
-              <a href="https://www.facebook.com/rewardclubloyalty" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF className="text-Green text-xl hover:text-black" />
+        {/* Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-Green">Quick Links</h3>
+            <ul className="space-y-2">
+              <li><a href="/tiers-benefits" className="text-gray-300 hover:text-white transition">{t("exploreTiers")}</a></li>
+              <li><a href="/brands" className="text-gray-300 hover:text-white transition">{t("discoverBrands")}</a></li>
+              <li><a href="/offers-rewards" className="text-gray-300 hover:text-white transition">{t("unlockRewards")}</a></li>
+              <li><a href="/contact-us" className="text-gray-300 hover:text-white transition">{t("getSupport")}</a></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-Green">Company</h3>
+            <ul className="space-y-2">
+              <li><a href="/about-us" className="text-gray-300 hover:text-white transition">{t("About_us")}</a></li>
+              <li><a href="/privacy-policy" className="text-gray-300 hover:text-white transition">{t("privacyPolicy")}</a></li>
+              <li><a href="/terms-conditions" className="text-gray-300 hover:text-white transition">{t("termsConditions")}</a></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-Green">{t("customerSupport")}</h3>
+            <a href="tel:+97145284037" className="text-gray-300 hover:text-Green transition mb-3 block">
+              <div className="font-semibold">📞 {t("callSupport")}</div>
+              <div dir="ltr" className="text-sm">+971 45284037</div>
+            </a>
+            <a href="mailto:support@rewardclub.net" className="text-Green hover:text-white transition">
+              📧 support@rewardclub.net
+            </a>
+          </div>
+
+          {/* Social & Follow */}
+          <div>
+            <h3 className="text-lg font-bold mb-4 text-Green">{t("followUs")}</h3>
+            <div className="flex gap-4 mb-6">
+              <a href="https://www.facebook.com/rewardclubloyalty" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-Green/20 flex items-center justify-center hover:bg-Green transition">
+                <FaFacebookF className="text-Green text-lg" />
               </a>
-              <a href="https://www.instagram.com/reward_club_/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="text-Green text-xl hover:text-black" />
+              <a href="https://www.instagram.com/reward_club_/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-Green/20 flex items-center justify-center hover:bg-Green transition">
+                <FaInstagram className="text-Green text-lg" />
               </a>
-              <a href="https://x.com/Reward_Club_" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter className="text-Green text-xl hover:text-black" />
+              <a href="https://x.com/Reward_Club_" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-Green/20 flex items-center justify-center hover:bg-Green transition">
+                <FaXTwitter className="text-Green text-lg" />
               </a>
             </div>
           </div>
-          <div className="col-span-1 md:col-span-1 lg:col-span-1">
-            <h3 className="font-semibold mb-2">{t("newsletterHeading") || "Stay Updated"}</h3>
-            <form onSubmit={handleSubscribe} className="flex flex-col w-full max-w-xs gap-2">
-              <label htmlFor="footer-email" className="sr-only">{t('enterYourEmail')}</label>
-              <input
-                id="footer-email"
-                type="email"
-                placeholder={t("enterYourEmail") || "Enter your email"}
-                className="p-3 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-Green"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button
-                type="submit"
-                className="btn-primary w-max px-4 py-2 rounded-md"
-                disabled={loading}
-              >
-                {loading ? t("submitting") || "Submitting..." : t("register") || "Subscribe"}
-              </button>
-              {message && <p className="mt-2 text-sm text-gray-600">{message}</p>}
-            </form>
-          </div>
         </div>
 
-        {/* Newsletter Section */}
-
-      </div>
-
-      <hr className="my-6 border-gray-300" />
-      <div className="flex flex-col md:flex-row justify-between text-gray-500 text-sm text-center md:text-left">
-        <p>©{new Date().getFullYear()} {t("copyright")}</p>
-        <div className="flex lg:ml-0 ml-4 lg:mt-0 mt-2 space-x-4">
-          <a href="/about-us">{t("About_us")}</a>
-          <a href="/terms-conditions">{t("termsConditions")}</a>
-          <a href="/privacy-statement">{t("privacyPolicy")}</a>
+        {/* Footer Bottom */}
+        <hr className="border-gray-700 mb-6" />
+        <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+          <p>©{new Date().getFullYear()} {t("copyright")}. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -97,29 +97,34 @@ export default function BrandFilter() {
       </h2>
       <p className="text-gray-600 mb-6">{t("explore_brands")}</p>
       
-      {/* Basic Input and Button */}
-      <div className="flex gap-4 mb-6 items-center">
+      {/* Search Input */}
+      <div className="mb-8">
         <label htmlFor="brand-search" className="sr-only">{t('search_placeholder')}</label>
-        <div className="relative w-full">
+        <div className="relative w-full max-w-md">
           <input
             id="brand-search"
             type="text"
             aria-label={t('search_placeholder')}
             placeholder={t("search_placeholder")} 
-            className="w-full p-3 border rounded-lg pr-10 focus:ring-2 focus:ring-Green focus:border-transparent"
+            className="w-full px-4 py-3 pl-12 border-2 border-gray-200 rounded-full focus:outline-none focus:border-Green focus:ring-2 focus:ring-Green/20 transition-all"
             value={searchQuery} 
             onChange={(e) => setSearchQuery(e.target.value)} 
           />
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</div>
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-Gray-400 text-lg">🔍</div>
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-3 mb-6">
+      {/* Category Filters */}
+      <div className="flex flex-wrap gap-3 mb-10">
         {categories.map((category) => (
           <button
             key={category} 
             onClick={() => setSelectedCategory(category)} 
-            className={`${selectedCategory === category ? 'btn-primary' : 'btn-outline rounded-full px-4 py-2'}`}
+            className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              selectedCategory === category 
+                ? 'btn-primary shadow-md' 
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
             aria-pressed={selectedCategory === category}
           >
             {category}
@@ -127,17 +132,18 @@ export default function BrandFilter() {
         ))}
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Brands Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {finalBrands.map((brand) => (
-          <div key={brand.name} className="bg-white shadow-custom rounded-lg p-4 flex items-center justify-center card-lift">
-            <img src={brand.src} alt={brand.alt} className="h-24 w-auto object-contain" />
+          <div 
+            key={brand.name} 
+            className="bg-white shadow-custom rounded-2xl p-6 flex flex-col items-center justify-center min-h-[180px] card-lift hover:shadow-xl transition-all duration-300"
+          >
+            <img src={brand.src} alt={brand.alt} className="h-20 w-auto object-contain mb-3" />
+            <p className="text-sm text-center text-gray-600 font-medium">{brand.name}</p>
           </div>
-
         ))}
       </div>
-      {/* <div class="flex justify-center items-center ">
-    <span class="text-4xl text-Green font-bold ">ACTIVE SOON</span>
-</div> */}
 
 
       

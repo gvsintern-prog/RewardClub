@@ -2,77 +2,86 @@ import React from 'react';
 import { useTranslation } from 'react-i18next'; // Import the useTranslation hook
 
 const TierCard = () => {
-  const { t } = useTranslation(); // Use the useTranslation hook to access translations
+  const { t } = useTranslation();
 
   return (
-    <div>
-      <div className="lg:ml-48 ml-0 mt-0 text-center lg:text-left">
-        <h2 className="text-3xl font-bold mt-0 lg:mt-20 text-gray-900">
-          <span className="text-black ml-0 lg:ml-4">{t('explore_tiers')}</span><span className="text-Green">{t('tiers')}</span>
-        </h2>
-        <p className="text-gray-600 p-4 mt-2">
-          {t('earn_points')}
-        </p>
+    <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-6xl mx-auto px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-3">
+            {t('explore_tiers')} <span className="text-Green">{t('tiers')}</span>
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            {t('earn_points')}
+          </p>
+        </div>
+
+        {/* Cards Container */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          {/* Classic Tier */}
+          <div className="group rounded-3xl overflow-hidden shadow-custom card-lift hover:shadow-2xl transition-all duration-300 bg-white">
+            <div className="h-40 bg-Green flex items-center justify-center">
+              <h3 className="text-white text-3xl font-bold">{t('classic_tier')}</h3>
+            </div>
+            <div className="p-8 min-h-[200px] flex flex-col justify-between">
+              <div>
+                <p className="text-Green font-bold text-xl mb-3">{t('classic_points')}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('classic_description')}
+                </p>
+              </div>
+              <button className="mt-6 btn-outline w-full py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                {t('learn_more') || 'Learn More'}
+              </button>
+            </div>
+          </div>
+
+          {/* Silver Tier */}
+          <div className="group rounded-3xl overflow-hidden shadow-custom card-lift hover:shadow-2xl transition-all duration-300 bg-white transform md:scale-105">
+            <div className="h-40 bg-gradient-to-r from-Green to-teal-600 flex items-center justify-center">
+              <h3 className="text-white text-3xl font-bold">{t('silver_tier')}</h3>
+            </div>
+            <div className="p-8 min-h-[200px] flex flex-col justify-between bg-gradient-to-b from-white to-gray-50">
+              <div>
+                <p className="text-Green font-bold text-xl mb-3">{t('silver_points')}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('silver_description')}
+                </p>
+              </div>
+              <button className="mt-6 btn-primary w-full py-2 rounded-lg transition-all duration-300">
+                {t('learn_more') || 'Learn More'}
+              </button>
+            </div>
+          </div>
+
+          {/* Gold Tier */}
+          <div className="group rounded-3xl overflow-hidden shadow-custom card-lift hover:shadow-2xl transition-all duration-300 bg-white">
+            <div className="h-40 bg-gradient-to-r from-Green via-teal-500 to-blue-600 flex items-center justify-center">
+              <h3 className="text-white text-3xl font-bold">{t('gold_tier')}</h3>
+            </div>
+            <div className="p-8 min-h-[200px] flex flex-col justify-between">
+              <div>
+                <p className="text-Green font-bold text-xl mb-3">{t('gold_points')}</p>
+                <p className="text-gray-600 leading-relaxed">
+                  {t('gold_description')}
+                </p>
+              </div>
+              <button className="mt-6 btn-outline w-full py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                {t('learn_more') || 'Learn More'}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Button */}
+        <div className="flex justify-center">
+          <a href='/tiers-benefits'>
+            <button className="btn-primary px-10 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all">
+              {t('get_started')}
+            </button>
+          </a>
+        </div>
       </div>
-
-      {/* Cards Container */}
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 space-y-6 lg:space-y-0 mt-6">
-        {/* First Card */}
-        <div className="flex flex-col items-center p-6 bg-white">
-          <div className="w-72 rounded-[40px] shadow-custom overflow-hidden card-lift bg-white">
-            <div className="h-32 flex items-center justify-center bg-Green text-white">
-              <h3 className="text-center text-3xl font-semibold">{t('classic_tier')}</h3>
-            </div>
-            <div className="bg-white p-6 min-h-[140px] flex flex-col justify-center">
-              <p className="text-gray-800 font-semibold text-lg">
-                <span className="text-Green">{t('classic_points')}</span>
-              </p>
-              <p className="text-gray-600 mt-2 leading-relaxed text-sm">
-                {t('classic_description')}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Second Card */}
-        <div className="flex flex-col items-center p-6 bg-white">
-          <div className="w-72 rounded-[40px] shadow-custom overflow-hidden">
-            <div className="bg-Green to-orange-400 h-32">
-              <h3 className="text-white relative top-12 text-center text-3xl font-semibold">{t('silver_tier')}</h3>
-            </div>
-            <div className="bg-white h-32 p-4">
-              <p className="text-gray-800 font-semibold">
-                <span className="text-Green">{t('silver_points')}</span>
-              </p>
-              <p className="text-gray-600 mt-2">
-                {t('silver_description')}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Third Card */}
-        <div className="flex flex-col items-center p-6 bg-white">
-          <div className="w-72 rounded-[40px] shadow-custom overflow-hidden">
-            <div className="bg-Green to-orange-400 h-32">
-              <h3 className="text-white relative top-12 text-center text-3xl font-semibold">{t('gold_tier')}</h3>
-            </div>
-            <div className="bg-white h-32 p-4">
-              <p className="text-gray-800 font-semibold">
-                <span className="text-Green">{t('gold_points')}</span>
-              </p>
-              <p className="text-gray-600 mt-2">
-                {t('gold_description')}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        {/* Button below the cards */}
-      <a href='/tiers-benefits' className="flex justify-center mt-8 mb-8">
-        <button className="btn-primary px-6 py-3 text-xl">{t('get_started')}</button>
-      </a>
     </div>
   );
 };
