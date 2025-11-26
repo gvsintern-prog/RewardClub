@@ -48,9 +48,14 @@ const TierCard = () => {
                   </div>
                 </div>
 
-                <button className="w-full btn-outline py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
-                  {t('learn_more') || 'Learn More'}
-                </button>
+                <a href="/tiers-benefits" className="block">
+                  <button className="w-full group/btn relative overflow-hidden bg-white border-2 border-Green text-Green py-3 px-6 rounded-xl font-bold text-base transition-all duration-300 hover:bg-Green hover:text-white flex items-center justify-center gap-2">
+                    <span>{t('learn_more') || 'Learn More'}</span>
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -85,9 +90,14 @@ const TierCard = () => {
                   </div>
                 </div>
 
-                <button className="w-full btn-primary py-3 rounded-xl font-semibold hover:shadow-lg transition-all">
-                  {t('learn_more') || 'Learn More'}
-                </button>
+                <a href="/tiers-benefits" className="block">
+                  <button className="w-full group/btn relative bg-Green text-white py-3 px-6 rounded-xl font-bold text-base transition-all duration-300 hover:shadow-xl hover:shadow-Green/40 hover:-translate-y-1 flex items-center justify-center gap-2">
+                    <span>{t('learn_more') || 'Learn More'}</span>
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -122,9 +132,14 @@ const TierCard = () => {
                   </div>
                 </div>
 
-                <button className="w-full btn-outline py-3 rounded-xl font-semibold hover:bg-gray-50 transition-colors">
-                  {t('learn_more') || 'Learn More'}
-                </button>
+                <a href="/tiers-benefits" className="block">
+                  <button className="w-full group/btn relative overflow-hidden bg-white border-2 border-Green text-Green py-3 px-6 rounded-xl font-bold text-base transition-all duration-300 hover:bg-Green hover:text-white flex items-center justify-center gap-2">
+                    <span>{t('learn_more') || 'Learn More'}</span>
+                    <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
