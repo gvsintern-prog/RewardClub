@@ -383,7 +383,42 @@
                                      "qr_code": "QR Code",
                                      "app_preview": "RewardClub App",
                                      "points_balance": "Points Balance",
-                                     "redeem_now": "Redeem Now"
+                                     "redeem_now": "Redeem Now",
+                                     
+                                     "secure_payment": "Secure Payment",
+                                     "secure_payment_desc": "100% secure transactions",
+                                     "instant_reward": "Instant Rewards",
+                                     "instant_reward_desc": "Points credited immediately",
+                                     "24_7_support": "24/7 Support",
+                                     "support_desc": "Always here to help",
+                                     "trusted_brand": "Trusted by Thousands",
+                                     "trusted_desc": "50K+ active members",
+                                     
+                                     "refer_friend": "Refer & Earn",
+                                     "referral_desc": "Share the love! Invite your friends to join RewardClub and both of you earn exclusive bonuses.",
+                                     "referral_bonus_1": "500 bonus points per successful referral",
+                                     "referral_bonus_2": "Your friend gets 500 bonus points too",
+                                     "referral_bonus_3": "No limit on referrals - earn unlimited rewards",
+                                     "join_referral": "Join Referral Program",
+                                     "your_referral_code": "Your Referral Code",
+                                     "share_code": "Share this code",
+                                     "copy_code": "Copy Code",
+                                     "copied": "Copied!",
+                                     "referral_share_text": "Join RewardClub with my referral code and earn 500 bonus points!",
+                                     "how_referral_works": "How It Works",
+                                     "ref_step1_title": "Share Your Code",
+                                     "ref_step1_desc": "Send your referral code to friends",
+                                     "ref_step2_title": "They Sign Up",
+                                     "ref_step2_desc": "Your friend joins using your code",
+                                     "ref_step3_title": "You Both Earn",
+                                     "ref_step3_desc": "Both get 500 bonus points instantly",
+                                     
+                                     "whatsapp": "WhatsApp",
+                                     "call": "Call",
+                                     
+                                     "limited_offer": "Limited Time Offer!",
+                                     "limited_offer_desc": "Join now and get 1000 bonus points",
+                                     "claim_bonus": "Claim Bonus"
  
             
           

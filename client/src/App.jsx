@@ -15,6 +15,9 @@ import { DirectionProvider } from './Components/DirectionContext';
 import FAQ from './Components/Faq/Faq';
 import About from './Components/About/About';
 import MemberRegister from './Components/MemberRegister/MemberRegister';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
+import ContactFloat from './Components/ContactFloat/ContactFloat';
+import UrgencyBanner from './Components/UrgencyBanner/UrgencyBanner';
 // import LoginPage from './Components/Login/Login';
 // import VendorRegister from './Components/VendorRegister/VendorRegister';
 
@@ -22,6 +25,7 @@ function App() {
   return (
     <Router>
       <DirectionProvider />
+      <UrgencyBanner />
       <Navbar />
       <MobileNavbar />
       <Routes>
@@ -40,6 +44,8 @@ function App() {
 
       </Routes>
       <Footer />
+      <ScrollToTop />
+      <ContactFloat />
     </Router>
   );
 }

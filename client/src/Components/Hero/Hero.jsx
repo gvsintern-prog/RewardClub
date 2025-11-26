@@ -10,6 +10,8 @@ import Testimonials from '../Testimonials/Testimonials';
 import HowItWorks from '../HowItWorks/HowItWorks';
 import BenefitsComparison from '../BenefitsComparison/BenefitsComparison';
 import AppDownload from '../AppDownload/AppDownload';
+import TrustBadges from '../TrustBadges/TrustBadges';
+import ReferralProgram from '../ReferralProgram/ReferralProgram';
 import "./b.css"
 import i1 from "./i1.webp"
 import i2 from "./i2.webp"
@@ -84,11 +86,13 @@ const LifestyleRewards = () => {
           </div>
         </div>
       </div>
+      <TrustBadges />
       <HowItWorks />
       <Slide />
       <TierCard />
       <BenefitsComparison />
       <MostLovedBrands />
+      <ReferralProgram />
       <AppDownload />
       <Testimonials />
       <Faqactive />

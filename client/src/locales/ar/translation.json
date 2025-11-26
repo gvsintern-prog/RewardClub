@@ -390,7 +390,42 @@
                     "qr_code": "رمز QR",
                     "app_preview": "تطبيق نادي المكافآت",
                     "points_balance": "رصيد النقاط",
-                    "redeem_now": "استبدل الآن"
+                    "redeem_now": "استبدل الآن",
+                    
+                    "secure_payment": "الدفع الآمن",
+                    "secure_payment_desc": "معاملات آمنة 100٪",
+                    "instant_reward": "المكافآت الفورية",
+                    "instant_reward_desc": "النقاط معتمدة على الفور",
+                    "24_7_support": "دعم 24/7",
+                    "support_desc": "نحن هنا دائماً للمساعدة",
+                    "trusted_brand": "موثوق من قبل الآلاف",
+                    "trusted_desc": "50K+ عضو نشط",
+                    
+                    "refer_friend": "أحضر صديق واربح",
+                    "referral_desc": "شارك الحب! دعوة أصدقائك للانضمام إلى RewardClub وتمتع بك كلاكما بمكافآت حصرية.",
+                    "referral_bonus_1": "500 نقطة مكافأة لكل إحالة ناجحة",
+                    "referral_bonus_2": "صديقك يحصل على 500 نقطة مكافأة أيضاً",
+                    "referral_bonus_3": "لا توجد حدود على الإحالات - اكسب مكافآت غير محدودة",
+                    "join_referral": "انضم إلى برنامج الإحالة",
+                    "your_referral_code": "رمز الإحالة الخاص بك",
+                    "share_code": "شارك هذا الرمز",
+                    "copy_code": "انسخ الرمز",
+                    "copied": "تم النسخ!",
+                    "referral_share_text": "انضم إلى RewardClub برمز الإحالة الخاص بي واكسب 500 نقطة مكافأة!",
+                    "how_referral_works": "كيف يعمل",
+                    "ref_step1_title": "شارك رمزك",
+                    "ref_step1_desc": "أرسل رمز الإحالة الخاص بك للأصدقاء",
+                    "ref_step2_title": "يسجلون",
+                    "ref_step2_desc": "ينضم صديقك باستخدام رمزك",
+                    "ref_step3_title": "تكسبان معاً",
+                    "ref_step3_desc": "يحصل كلاكما على 500 نقطة مكافأة على الفور",
+                    
+                    "whatsapp": "واتس أب",
+                    "call": "اتصل",
+                    
+                    "limited_offer": "عرض محدود الوقت!",
+                    "limited_offer_desc": "انضم الآن واحصل على 1000 نقطة مكافأة",
+                    "claim_bonus": "احصل على المكافأة"
                   
                   
                   
