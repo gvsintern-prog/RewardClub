@@ -8,17 +8,19 @@ const ProductCard = ({ imgSrc, brandLogo, title }) => {
 
   return (
     <div className="">
-      <div className="rounded-xl shadow-lg mt-10 overflow-hidden bg-white">
+      <div className="rounded-xl shadow-custom mt-10 overflow-hidden bg-white card-lift">
         <div className="relative">
-          <img src={imgSrc} alt="Product" className="w-full h-64 object-cover" />
-          
+          <img src={imgSrc} alt={title} className="w-full h-64 object-cover transition-transform duration-300 hover:scale-105" />
+          {brandLogo && (
+            <img src={brandLogo} alt="brand" className="absolute top-3 left-3 w-12 h-12 object-contain rounded-md bg-white/80 p-1 shadow" />
+          )}
         </div>
         <div className="p-4">
-          <span className="px-2 py-1 rounded-md whitespace-nowrap flex items-center gap-1">
-            <div className="shadow-custom p-2 flex">
-              <FaHome className="mr-2 mt-1 ml-2" /> {t('inStore')} {/* Use translation for "In-store" */}
+          <div className="flex items-center gap-2 text-sm text-gray-700 mb-3">
+            <div className="shadow-custom p-2 rounded-md flex items-center gap-2">
+              <FaHome className="text-Green" /> <span className="font-semibold">{t('inStore')}</span>
             </div>
-          </span>
+          </div>
           <h3 className="mt-2 text-lg font-bold text-gray-900">{title}</h3>
         </div>
       </div>

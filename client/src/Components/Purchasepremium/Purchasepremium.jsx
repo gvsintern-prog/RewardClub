@@ -6,7 +6,7 @@ const ProductCard = ({ imgSrc, brandLogo, title, points }) => {
   const { t } = useTranslation();
   return (
     <div className="lg:h-[384px] h-[400px]">
-      <div className="rounded-xl shadow-lg mt-10 overflow-hidden bg-white flex flex-col h-full">
+      <div className="rounded-xl shadow-custom mt-10 overflow-hidden bg-white flex flex-col h-full card-lift">
         <div className="relative">
           <img src={imgSrc} alt="Product" className="w-full h-64 object-cover" />
          
@@ -23,6 +23,9 @@ const ProductCard = ({ imgSrc, brandLogo, title, points }) => {
           <h3 className="mt-2 text-lg font-bold text-gray-900 min-h-[7px] flex items-center">
             {t(title)}
           </h3>
+          <div className="mt-4">
+            <button className="btn-outline">{t('redeem')}</button>
+          </div>
         </div>
       </div>
     </div>
@@ -66,7 +69,7 @@ const Purchasepremium = () => {
           <div key={index} className="h-full">
             <ProductCard
               imgSrc={product.imgSrc}
-          
+              
               title={product.title}
               points={product.points}
             />

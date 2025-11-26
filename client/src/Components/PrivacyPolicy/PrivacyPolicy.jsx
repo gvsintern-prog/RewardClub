@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
   return (
     <div>
       {isRTL ? (
-        <div className="max-w-4xl mx-auto p-6 mt-20 text-gray-800">
+        <div className="max-w-4xl mx-auto p-8 mt-20 text-gray-800 bg-white rounded-xl shadow-custom leading-relaxed">
           <h1 className="text-3xl font-bold text-Green">سياسة الخصوصية</h1>
           <p className="text-sm text-gray-500 mt-1">
             الإصدار 1.0 آخر تحديث في{" "}
@@ -150,6 +150,10 @@ const PrivacyPolicy = () => {
               </li>
               <br />
             </ul>
+            <div className="mt-8 border-t pt-6 flex gap-3">
+              <a href="/contact-us" className="inline-block"><button className="btn-primary">{t('getSupport')}</button></a>
+              <a href="mailto:support@rewardclub.net" className="inline-block"><button className="btn-outline">{t('emailUs') || 'Email'}</button></a>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-1 mt-6"> هل تحتاج إلى مساعدة؟</h3>
@@ -195,7 +199,7 @@ const PrivacyPolicy = () => {
           </>
         </div> 
       ) : (
-        <div className="max-w-4xl mx-auto p-6 mt-20 text-gray-800">
+        <div className="max-w-4xl mx-auto p-8 mt-20 text-gray-800 bg-white rounded-xl shadow-custom leading-relaxed">
           <h1 className="text-3xl font-bold text-Green">Privacy Policy</h1>
           <p className="text-sm text-gray-500 mt-1">
             Version 1.0 Last updated on{" "}
@@ -427,6 +431,10 @@ const PrivacyPolicy = () => {
               </li>
               <br />
             </ul>
+            <div className="mt-8 border-t pt-6 flex gap-3">
+              <a href="/contact-us" className="inline-block"><button className="btn-primary">{t('getSupport')}</button></a>
+              <a href="mailto:support@rewardclub.net" className="inline-block"><button className="btn-outline">{t('emailUs') || 'Email'}</button></a>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-1 mt-6"> Need help?</h3>

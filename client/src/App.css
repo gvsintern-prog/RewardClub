@@ -3,9 +3,40 @@
     box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   }
   .bg-Green {
-    background-color: #827127;
+    /* Primary green for RewardClub — kept for compatibility but use gradient in components */
+    background: linear-gradient(90deg,#6f7a16 0%,#827127 100%);
   }
   .text-Green {
     color: #827127;  /* For text color */
   }
+}
+
+/* Global typographic/visual improvements */
+@layer base{
+  html,body,#root{height:100%}
+  body{
+    font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color: #0f1724; /* slightly softer than black */
+    background: linear-gradient(180deg, #fffdf8 0%, #fbfbfb 100%);
+  }
+}
+
+@layer utilities{
+  /* Primary filled button */
+  .btn-primary{
+    display:inline-flex; align-items:center; justify-content:center; border-radius:0.5rem; padding:0.625rem 1.25rem; font-weight:600; color:#fff; background: linear-gradient(90deg,#6f7a16 0%,#827127 100%); box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; transition: transform .2s ease, box-shadow .2s ease; will-change: transform;
+  }
+  .btn-primary:hover{ transform: translateY(-4px); box-shadow: 0 12px 30px rgba(2,6,23,0.12) }
+
+  /* Outline / secondary button */
+  .btn-outline{
+    display:inline-flex; align-items:center; justify-content:center; border-radius:0.5rem; padding:0.5rem 1rem; font-weight:600; border:1px solid rgba(226,232,240,1); color:#374151; background:#fff; transition: background-color .2s ease;
+  }
+  .btn-outline:hover{ background:#f3f4f6 }
+
+  /* Card hover lift */
+  .card-lift{ transition: transform .25s ease, box-shadow .25s ease; }
+  .card-lift:hover{ transform: translateY(-8px); box-shadow: 0 12px 30px rgba(2,6,23,0.12) }
 }

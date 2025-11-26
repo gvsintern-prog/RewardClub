@@ -37,15 +37,17 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[700px] lg:h-[80vh] mt-0 lg:mt-14 overflow-hidden top-0 z-10">
+    <div className="relative w-full h-[600px] lg:h-[70vh] mt-0 lg:mt-14 overflow-hidden top-0 z-10 rounded-b-3xl">
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="relative">
             <img
               src={image}
               alt={`Image ${index + 1}`}
-              className="w-full h-[472px] lg:h-[500px] object-fill"
+              className="w-full h-[600px] lg:h-[70vh] object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
           </div>
         ))}
       </Slider>

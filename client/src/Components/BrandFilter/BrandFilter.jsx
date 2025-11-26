@@ -98,14 +98,20 @@ export default function BrandFilter() {
       <p className="text-gray-600 mb-6">{t("explore_brands")}</p>
       
       {/* Basic Input and Button */}
-      <div className="flex gap-4 mb-6">
-        <input 
-          type="text"
-          placeholder={t("search_placeholder")} 
-          className="w-full p-3 border rounded-lg"
-          value={searchQuery} 
-          onChange={(e) => setSearchQuery(e.target.value)} 
-        />
+      <div className="flex gap-4 mb-6 items-center">
+        <label htmlFor="brand-search" className="sr-only">{t('search_placeholder')}</label>
+        <div className="relative w-full">
+          <input
+            id="brand-search"
+            type="text"
+            aria-label={t('search_placeholder')}
+            placeholder={t("search_placeholder")} 
+            className="w-full p-3 border rounded-lg pr-10 focus:ring-2 focus:ring-Green focus:border-transparent"
+            value={searchQuery} 
+            onChange={(e) => setSearchQuery(e.target.value)} 
+          />
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">🔍</div>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-3 mb-6">
@@ -113,7 +119,8 @@ export default function BrandFilter() {
           <button
             key={category} 
             onClick={() => setSelectedCategory(category)} 
-            className={`px-4 py-2 rounded-full border ${selectedCategory === category ? 'bg-Green text-white' : 'bg-white text-gray-700 cursor-pointer'}`}
+            className={`${selectedCategory === category ? 'btn-primary' : 'btn-outline rounded-full px-4 py-2'}`}
+            aria-pressed={selectedCategory === category}
           >
             {category}
           </button>
@@ -122,10 +129,10 @@ export default function BrandFilter() {
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {finalBrands.map((brand) => (
-          <div key={brand.name} className="bg-white shadow-custom rounded-lg p-4 flex items-center justify-center">
-            <img src={brand.src} alt={brand.alt} className="h-24 w-auto" />
+          <div key={brand.name} className="bg-white shadow-custom rounded-lg p-4 flex items-center justify-center card-lift">
+            <img src={brand.src} alt={brand.alt} className="h-24 w-auto object-contain" />
           </div>
-          
+
         ))}
       </div>
       {/* <div class="flex justify-center items-center ">

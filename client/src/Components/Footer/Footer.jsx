@@ -45,10 +45,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-white text-black py-10 px-6 md:px-20">
-      <div className="max-w-7xl relative ml-0 lg:ml-9 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+    <footer className="bg-white text-black py-12 px-6 md:px-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 items-start">
         <div className="md:col-span-2">
-          <ul className="space-y-2 relative left-0 lg:left-38 lg:right-[256px] text-black font-medium">
+          <ul className="space-y-3 text-black font-medium leading-relaxed">
             <li><a href="/tiers-benefits">{t("exploreTiers")}</a></li>
             <li><a href="/brands">{t("discoverBrands")}</a></li>
             <li><a href="/offers-rewards">{t("unlockRewards")}</a></li>
@@ -59,8 +59,8 @@ const Footer = () => {
         <div className="relative right-0 lg:right-10">
           <h3 className="font-semibold text-center">{t("customerSupport")}</h3>
           <a href="tel:+97145284037">
-            <button className="border border-Green text-Green px-0 py-2 mt-2 cursor-pointer rounded-[30px] w-full">
-              {t("callSupport")}{" "}
+            <button className="btn-outline w-full mt-2 flex items-center justify-center gap-2">
+              <span className="text-Green font-semibold">{t("callSupport")}</span>
               <span dir="ltr" style={{ unicodeBidi: "plaintext" }}>+971 45284037</span>
             </button>
           </a>
@@ -85,26 +85,28 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-span-1 md:col-span-1 lg:col-span-1">
-          <h3 className="font-semibold mb-2">{t("newsletterHeading") || "Stay Updated"}</h3>
-          <form onSubmit={handleSubscribe} className="flex flex-col w-full max-w-xs">
-            <input
-              type="email"
-              placeholder={t("enterYourEmail") || "Enter your email"}
-              className="p-2 text-gray-800 border border-gray-300 rounded mb-2"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button
-              type="submit"
-              className="bg-Green text-white hover:bg-black px-4 py-2 rounded-full"
-              disabled={loading}
-            >
-              {loading ? t("submitting") || "Submitting..." : t("register") || "Subscribe"}
-            </button>
-            {message && <p className="mt-2 text-sm text-gray-600">{message}</p>}
-          </form>
-        </div>
+            <h3 className="font-semibold mb-2">{t("newsletterHeading") || "Stay Updated"}</h3>
+            <form onSubmit={handleSubscribe} className="flex flex-col w-full max-w-xs gap-2">
+              <label htmlFor="footer-email" className="sr-only">{t('enterYourEmail')}</label>
+              <input
+                id="footer-email"
+                type="email"
+                placeholder={t("enterYourEmail") || "Enter your email"}
+                className="p-3 text-gray-800 border border-gray-300 rounded-md focus:ring-2 focus:ring-Green"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button
+                type="submit"
+                className="btn-primary w-max px-4 py-2 rounded-md"
+                disabled={loading}
+              >
+                {loading ? t("submitting") || "Submitting..." : t("register") || "Subscribe"}
+              </button>
+              {message && <p className="mt-2 text-sm text-gray-600">{message}</p>}
+            </form>
+          </div>
         </div>
 
         {/* Newsletter Section */}

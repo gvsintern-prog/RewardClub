@@ -91,13 +91,13 @@ const MemberRegister = () => {
             {t("member_register")}
           </h2>
           <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder={t("first_name")} className="border p-3 rounded w-full" />
-            <input type="text" placeholder={t("last_name")} className="border p-3 rounded w-full" />
-            <input type="email" placeholder={t("email")} className="border p-3 rounded w-full" />
-            <input type="email" placeholder={t("secondary_email")} className="border p-3 rounded w-full" />
-            <input type="password" placeholder={t("password")} className="border p-3 rounded w-full" />
-            <input type="password" placeholder={t("confirm_password")} className="border p-3 rounded w-full" />
-            <input type="date" className="border p-3 rounded w-full" />
+            <input type="text" placeholder={t("first_name")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="text" placeholder={t("last_name")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="email" placeholder={t("email")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="email" placeholder={t("secondary_email")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="password" placeholder={t("password")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="password" placeholder={t("confirm_password")} className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
+            <input type="date" className="border p-3 rounded w-full focus:ring-2 focus:ring-Green" />
 
             <div className="flex items-center space-x-4 w-full">
               <label className="flex items-center">
@@ -172,7 +172,7 @@ const MemberRegister = () => {
               type="submit"
               disabled={!isTermsAccepted}
               className={`col-span-2 p-3 rounded text-center transition w-full ${
-                isTermsAccepted ? "bg-Green hover:bg-white hover:outline-Green outline cursor-pointer text-white hover:text-green-500" : "bg-gray-300 cursor-not-allowed"
+                isTermsAccepted ? "btn-primary" : "bg-gray-300 cursor-not-allowed"
               }`}
             >
               {t("register")}

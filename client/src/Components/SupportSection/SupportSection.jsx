@@ -90,16 +90,16 @@ const SupportSection = () => {
 
         {/* Support Info Cards */}
         <div className="flex flex-wrap justify-center gap-6 mt-6">
-          <div className="w-72 h-32 bg-white rounded-[30px] p-4 shadow-md flex flex-col items-center justify-center border border-gray-200">
+          <div className="w-72 h-36 bg-white rounded-[30px] p-4 shadow-custom flex flex-col items-center justify-center border border-gray-100 card-lift">
             <FaPhoneAlt className="text-5xl text-Green" />
             <hr className="w-56 border-t-2 border-gray-300 mt-4" />
             <p className="mt-2 font-bold text-lg" dir="ltr">
               {supportInfo[country].phone}
             </p>
           </div>
-          <div className="w-72 h-32 bg-white rounded-[30px] p-2 shadow-md flex flex-col items-center justify-center border border-gray-200">
+          <div className="w-72 h-36 bg-white rounded-[30px] p-2 shadow-custom flex flex-col items-center justify-center border border-gray-100 card-lift">
             <MdEmail className="text-6xl text-Green" />
-            <hr className="w-56 border-t-2 border-gray-300 mt-" />
+            <hr className="w-56 border-t-2 border-gray-300 mt-4" />
             <p className="mt-2 font-bold text-lg">{supportInfo[country].email}</p>
           </div>
         </div>

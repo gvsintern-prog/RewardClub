@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div>
         {isRTL ? (
-      <div className="max-w-5xl p-4 mx-auto mb-32">
+      <div className="max-w-5xl p-8 mx-auto mb-32 bg-white rounded-xl shadow-custom leading-relaxed">
       <h1 className="text-center text-Green mt-32 text-2xl ">
         حول نادي المكافآت
       </h1>
@@ -126,7 +126,11 @@ const About = () => {
         </p>
         <br />
         <br />
-      </div>
+          <div className="mt-8 border-t pt-6 flex flex-wrap gap-3">
+            <a href="/contact-us" className="inline-block"><button className="btn-primary">{t('getSupport')}</button></a>
+            <a href="mailto:support@rewardclub.net" className="inline-block"><button className="btn-outline">{t('emailUs') || 'Email'}</button></a>
+          </div>
+        </div>
       <>
         يجب تعيين حساب واحد فقط لنفس رقم الهاتف والبريد الإلكتروني. في حالة وجود حساب مكرر، يرجى الاتصال بنا لمساعدتك.
         <br />
@@ -163,7 +167,7 @@ const About = () => {
     </div>
 
         ):(
-            <div className="max-w-5xl p-4 mx-auto mb-32">
+            <div className="max-w-5xl p-8 mx-auto mb-32 bg-white rounded-xl shadow-custom leading-relaxed">
             <h1 className="text-center text-Green mt-32 text-2xl ">
               ABOUT REWARD CLUB
             </h1>
@@ -340,6 +344,10 @@ const About = () => {
               </p>
               <br />
               <br />
+              <div className="mt-8 border-t pt-6 flex flex-wrap gap-3">
+                <a href="/contact-us" className="inline-block"><button className="btn-primary">{t('getSupport')}</button></a>
+                <a href="mailto:support@rewardclub.net" className="inline-block"><button className="btn-outline">{t('emailUs') || 'Email'}</button></a>
+              </div>
             </div>
             <>
               Only one account should be assigned to the same mobile number and

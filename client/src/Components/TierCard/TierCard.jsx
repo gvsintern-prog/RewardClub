@@ -19,15 +19,15 @@ const TierCard = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center lg:space-x-6 space-y-6 lg:space-y-0 mt-6">
         {/* First Card */}
         <div className="flex flex-col items-center p-6 bg-white">
-          <div className="w-72 rounded-[40px] shadow-custom overflow-hidden">
-            <div className="bg-Green to-orange-400 h-32">
-              <h3 className="text-white relative top-12 text-center text-3xl font-semibold">{t('classic_tier')}</h3>
+          <div className="w-72 rounded-[40px] shadow-custom overflow-hidden card-lift bg-white">
+            <div className="h-32 flex items-center justify-center bg-Green text-white">
+              <h3 className="text-center text-3xl font-semibold">{t('classic_tier')}</h3>
             </div>
-            <div className="bg-white h-32 p-4">
-              <p className="text-gray-800 font-semibold">
+            <div className="bg-white p-6 min-h-[140px] flex flex-col justify-center">
+              <p className="text-gray-800 font-semibold text-lg">
                 <span className="text-Green">{t('classic_points')}</span>
               </p>
-              <p className="text-gray-600 mt-2">
+              <p className="text-gray-600 mt-2 leading-relaxed text-sm">
                 {t('classic_description')}
               </p>
             </div>
@@ -69,11 +69,9 @@ const TierCard = () => {
         </div>
       </div>
 
-      {/* Button below the cards */}
+        {/* Button below the cards */}
       <a href='/tiers-benefits' className="flex justify-center mt-8 mb-8">
-        <button className="px-5 py-2 bg-Green cursor-pointer hover:text-[#827127] outline hover:outline-black text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-white transition duration-300">
-          {t('get_started')}
-        </button>
+        <button className="btn-primary px-6 py-3 text-xl">{t('get_started')}</button>
       </a>
     </div>
   );

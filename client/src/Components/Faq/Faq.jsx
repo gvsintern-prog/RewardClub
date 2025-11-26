@@ -481,8 +481,8 @@ const FAQ = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto mt-32 p-4">
-        {isRTL?( <h1 class="text-3xl font-bold text-Green text-center mb-8 rtl">
+    <div className="max-w-4xl mx-auto mt-32 p-8 bg-white rounded-xl shadow-custom">
+        {isRTL?( <h1 className="text-3xl font-bold text-Green text-center mb-8 rtl">
     الأسئلة المتكررة
 </h1>):(<h1 className="text-3xl font-bold text-Green text-center mb-8">
 Frequently Asked Questions
@@ -491,10 +491,13 @@ Frequently Asked Questions
 
       <div className="space-y-4 ">
         {faqData.map((faq, index) => (
-          <div key={index} className="border rounded-lg  shadow-sm">
+          <div key={index} className="border rounded-lg shadow-sm bg-white overflow-hidden card-lift">
             <button
+              id={`faq-btn-${index}`}
+              aria-expanded={activeIndex === index}
+              aria-controls={`faq-body-${index}`}
               onClick={() => toggleFAQ(index)}
-              className="w-full cursor-pointer text-left p-4 focus:outline-none"
+              className="w-full cursor-pointer text-left p-4 focus:outline-none hover:bg-gray-50 transition"
             >
               <div className="flex justify-between items-center">
                 <span className="font-medium">{faq.question}</span>
@@ -503,11 +506,9 @@ Frequently Asked Questions
                 </span>
               </div>
             </button>
-            {activeIndex === index && (
-              <div className="p-4 border-t">
-                <p className="text-gray-600">{faq.answer}</p>
-              </div>
-            )}
+            <div id={`faq-body-${index}`} role="region" aria-labelledby={`faq-btn-${index}`} className={`${activeIndex === index ? 'p-4 border-t' : 'hidden'}`}>
+              <div className="text-gray-600">{faq.answer}</div>
+            </div>
           </div>
         ))}
       </div>

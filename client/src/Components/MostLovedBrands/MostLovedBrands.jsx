@@ -22,42 +22,40 @@ const MostLovedBrands = () => {
             {t('personalized_offers')}
           </p>
           <a href="/brands">
-            <button className="mt-6 px-6 py-3 bg-Green hover:bg-white outline hover:outline-black hover:text-[#827127] cursor-pointer text-white font-semibold rounded-lg">
-              {t('discover_brands12')}
-            </button>
+            <button className="btn-primary mt-6">{t('discover_brands12')}</button>
           </a>
         </div>
         {/* right section */}
         <div className="w-full md:w-3/5 shrink-0 lg:w-2/3 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-">
-          <div className="bg-white p-4 sm:p- rounded-xl shadow-custom flex items-center justify-center">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center card-lift">
             <img
               src={i2}
               alt="chipotle"
               className="h-16 sm:h-32 object-contain"
             />
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center card-lift">
             <img
               src={i3}
               alt="hm"
               className="h-16 sm:h-32 object-contain"
             />
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center card-lift">
             <img
               src={i4}
               alt="bath_body_works"
               className="h-16 sm:h-32 object-contain"
             />
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center card-lift">
             <img
               src={i5}
               alt="american_eagle"
               className="h-16 sm:h-32 object-contain"
             />
           </div>
-          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center">
+          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-custom flex items-center justify-center card-lift">
             <img
               src={i6}
               alt="victorias_secret"

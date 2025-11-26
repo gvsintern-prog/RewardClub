@@ -83,12 +83,12 @@ const Slide = () => {
                 {isLoaded ? (
                     <Slider ref={sliderRef} {...settings}>
                         {images.map((src, index) => (
-                            <div key={index} className="slide-item">
-                                <a href={imageLinks[index]} target="_blank" rel="noopener noreferrer" className="image-link">
+                            <div key={index} className="slide-item p-4">
+                                <a href={imageLinks[index]} target="_blank" rel="noopener noreferrer" className="image-link block p-4 rounded-lg bg-white shadow-custom card-lift">
                                     <img
                                         src={src}
                                         alt={`Slide ${index + 1}`}
-                                        className="object-contain w-full md:w-4/4 mx-auto slide-image"
+                                        className="object-contain w-full md:w-full mx-auto slide-image transition-transform duration-300 hover:scale-105"
                                         style={{ maxHeight: '200px' }}
                                     />
                                 </a>
