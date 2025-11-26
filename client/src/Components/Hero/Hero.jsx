@@ -6,6 +6,10 @@ import MostLovedBrands from '../MostLovedBrands/MostLovedBrands';
 import Slide from '../Slide/Slide';
 import { useTranslation } from 'react-i18next';
 import Faqactive from '../Faq/Faqactive';
+import Testimonials from '../Testimonials/Testimonials';
+import HowItWorks from '../HowItWorks/HowItWorks';
+import BenefitsComparison from '../BenefitsComparison/BenefitsComparison';
+import AppDownload from '../AppDownload/AppDownload';
 import "./b.css"
 import i1 from "./i1.webp"
 import i2 from "./i2.webp"
@@ -80,9 +84,13 @@ const LifestyleRewards = () => {
           </div>
         </div>
       </div>
+      <HowItWorks />
       <Slide />
       <TierCard />
+      <BenefitsComparison />
       <MostLovedBrands />
+      <AppDownload />
+      <Testimonials />
       <Faqactive />
     </div>
   );
