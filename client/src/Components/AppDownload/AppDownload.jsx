@@ -11,7 +11,7 @@ const AppDownload = () => {
   }, [isRTL]);
 
   return (
-    <section className="py-24 bg-gradient-to-r from-Green to-teal-600 px-8 md:px-16 lg:px-24 text-white">
+    <section className="py-24 bg-gradient-to-r from-[#6f7a16] to-[#827127] px-8 md:px-16 lg:px-24 text-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left - Content */}
