@@ -77,7 +77,7 @@ const Navbar = () => {
           <button className="btn-outline">{t("Login")}</button>
         </a>
         <a href="https://rewardclub.space/frontend/login?id=2" target="_blank">
-          <button className={`btn-primary ${i18n.language === 'ar' ? 'relative right-4' : ''}`}>{t("Signup")}</button>
+          <button className="btn-outline">{t("Signup")}</button>
         </a>
         <a href="https://rewardclub.space/frontend/login?id=3" target="_blank">
           <button className="btn-outline">{t("Vendor_Register")}</button>
