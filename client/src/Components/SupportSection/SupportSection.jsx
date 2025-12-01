@@ -93,7 +93,7 @@ const SupportSection = () => {
           <div className="w-72 h-36 bg-white rounded-[30px] p-4 shadow-custom flex flex-col items-center justify-center border border-gray-100 card-lift">
             <FaPhoneAlt className="text-5xl text-Green" />
             <hr className="w-56 border-t-2 border-gray-300 mt-4" />
-            <p className="mt-2 font-bold text-lg" dir="ltr">
+            <p className="mt-2 font-bold text-lg text-center">
               {supportInfo[country].phone}
             </p>
           </div>
