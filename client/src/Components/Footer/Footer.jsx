@@ -101,7 +101,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-Green">{t("customerSupport")}</h3>
             <a href="tel:+97145284037" className="text-gray-300 hover:text-Green transition mb-3 block">
               <div className="font-semibold">📞 {t("callSupport")}</div>
-              <div dir="ltr" className="text-sm">+971 45284037</div>
+              <div dir="rtl" className="text-sm">+971 45284037</div>
             </a>
             <a href="mailto:support@rewardclub.net" className="text-Green hover:text-white transition">
               📧 support@rewardclub.net
