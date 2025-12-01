@@ -4,7 +4,7 @@ import { FiX } from 'react-icons/fi';
 
 const UrgencyBanner = () => {
   const { t, i18n } = useTranslation();
-  const [isVisible, setIsVisible] = React.useState(true);
+  const [isVisible, setIsVisible] = React.useState(false);
 
   if (!isVisible) return null;
 

@@ -73,7 +73,7 @@ const TermsAndConditions = () => {
                 <button className="btn-primary">{t("getSupport")}</button>
               </a>
               <a href="mailto:support@rewardclub.net" className="inline-block">
-                <button className="btn-outline">{t("emailUs") || "Email"}</button>
+                <button className="btn-outline">{t("email Us") || "Email"}</button>
               </a>
             </div>
 
